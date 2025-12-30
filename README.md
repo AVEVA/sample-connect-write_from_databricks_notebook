@@ -29,7 +29,7 @@ To run the Notebook(s), you first need to attach it to a compute resource (clust
 
 ### Test the Notebook
 
-The last cell in the notebooks are for running unit tests so that you can test to make sure the whole notebook is working as expected. As it tests the methods defined earlier in the notebook, you need to run the previous cells of the notebook before trying to run the unit tests. If the tests pass, the block will succeed without any exceptions.
+The last cell in the notebooks are for running tests so that you can test to make sure the whole notebook is working as expected. As it tests the methods defined earlier in the notebook, you need to run the previous cells of the notebook before trying to run the tests. If the tests pass, the block will succeed without any exceptions.
 
 ---
 
