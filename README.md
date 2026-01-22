@@ -1,7 +1,7 @@
 # CONNECT Write From Databricks Notebook
 **Version:** 1.0.0
 
-The sample code in this folder demonstrates how to write data back to CONNECT data services (Cds) from Databricks. In order to run this sample, you need to have a Databricks environment.
+The sample code in this project demonstrates how to write data back to CONNECT data services (Cds) from Databricks. In order to run this sample, you need to have a Databricks environment.
 
 Developed against Python 3.10.12
 
@@ -10,10 +10,9 @@ Developed against Python 3.10.12
 This sample is intended to show you how you can write time-series data to CONNECT data services from a Databricks notebook. This may be useful after performing analytics or modelling in Databricks to bring those insights back to the CONNECT platform (and then perhaps back to an on-prem system). There are two sample notebooks in this repository. 
 
 1. **Write Single Stream to CONNECT using API Notebook.ipynb**
-  - uses the CONNECT data services Sequential Data Store (SDS) REST API to write values to a stream. It also makes use of the [Python sample library](https://github.com/AVEVA/sample-adh-sample_libraries-python) to keep the code simple. This method is straightforward and is more suited to sending minimal data to one or a few streams
-2. **Write Multiple Streams to CONNECT using OMF Notebook.ipynb** 
-  - uses CONNECT data services OMF messages to write a large amount of data to one or many streams. This is recommended method of sending a large amount of data to CONNECT data services
-  - for more information on OMF, see [Open Message Format (OMF)](https://docs.aveva.com/category/omf)
+uses the CONNECT data services Sequential Data Store (SDS) REST API to write values to a stream. It also makes use of the [Python sample library](https://github.com/AVEVA/sample-adh-sample_libraries-python) to keep the code simple. This method is straightforward and is more suited to sending minimal data to one or a few streams
+3. **Write Multiple Streams to CONNECT using OMF Notebook.ipynb** 
+uses CONNECT data services OMF messages to write a large amount of data to one or many streams. This is recommended method of sending a large amount of data to CONNECT data services. For more information on OMF, see [Open Message Format (OMF)](https://docs.aveva.com/category/omf)
 
 ## Getting started
 
@@ -31,7 +30,8 @@ You can then create the secret scope with one of two options.
   - Use the workspace terminal or command prompt. You can follow [Create a secret](https://docs.databricks.com/aws/en/security/secrets#create-a-secret) Create two secrets within that secret scope called `cdsclientid` and `cdsclientsecret` containing the client id and secret generated from CONNECT data services.
 
 2. Create a secret scope using the Databricks SDK for Python 
-  - If using this option, you can use the sample code included to create the secret scope and secrets. __Note that this option requires temporarily entering your client credentials into the notebook as plain text. It's recommended to delete these credentials after the block is run.__
+  - If using this option, you can use the sample code included to create the secret scope and secrets.
+  - ___Note: this option requires temporarily entering your client credentials into the notebook as plain text. It's recommended to delete these credentials after the block is run.___
 
 ### Running the notebook
 
