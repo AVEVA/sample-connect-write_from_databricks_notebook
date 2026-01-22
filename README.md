@@ -7,12 +7,12 @@ Developed against Python 3.10.12
 
 ## About the sample
 
-This sample is intended to show you how you can write time-series data to CONNECT data services from a Databricks notebook. This may be useful after performing analytics or modelling in Databricks to bring those insights back to the CONNECT platform (and then perhaps back to an on-prem system.) There are two sample notebooks in this repository. 
+This sample is intended to show you how you can write time-series data to CONNECT data services from a Databricks notebook. This may be useful after performing analytics or modelling in Databricks to bring those insights back to the CONNECT platform (and then perhaps back to an on-prem system). There are two sample notebooks in this repository. 
 
 1. **Write Single Stream to CONNECT using API Notebook.ipynb**
   - uses the CONNECT data services Sequential Data Store (SDS) REST API to write values to a stream. It also makes use of the [Python sample library](https://github.com/AVEVA/sample-adh-sample_libraries-python) to keep the code simple. This method is straightforward and is more suited to sending minimal data to one or a few streams
 2. **Write Multiple Streams to CONNECT using OMF Notebook.ipynb** 
-  - uses Cds OMF messages to write a large amount of data to one or many streams. This is recommended method of sending a large amount of data to CONNECT data services
+  - uses CONNECT data services OMF messages to write a large amount of data to one or many streams. This is recommended method of sending a large amount of data to CONNECT data services
   - for more information on OMF, see [Open Message Format (OMF)](https://docs.aveva.com/category/omf)
 
 ## Getting started
@@ -23,7 +23,7 @@ This sample is intended to show you how you can write time-series data to CONNEC
 
 ### Creating the secret scope
 
-This sample makes use of secret scopes in Databricks to securely store the credentials to CONNECT data services. To set up the secret scope, first create a client credentials client in CONNECT data services. For this sample, the client credentials client needs to be given a role that has read and write access to a CONNECT data services namespace. For instructions, see: [Add a client-credentials client](https://docs.aveva.com/bundle/connect-data-services/page/1263324.html) 
+This sample makes use of secret scopes in Databricks to securely store the credentials to CONNECT data services. To set up the secret scope, first create a client-credentials client in CONNECT data services. For this sample, the client-credentials client needs to be given a role that has read and write access to a CONNECT data services namespace. For instructions, see: [Add a client-credentials client](https://docs.aveva.com/bundle/connect-data-services/page/1263324.html) 
 
 You can then create the secret scope with one of two options. 
 
@@ -39,7 +39,7 @@ To run the Notebook(s), you first need to attach it to a compute resource (clust
 
 ### Test the notebook
 
-The last cell in the notebooks are for running tests so that you can test to make sure the whole notebook is working as expected. Because it tests the methods defined earlier in the notebook, you need to run the previous cells of the notebook before trying to run the tests. If the tests pass, the block will succeed without any exceptions.
+The last cell in the notebooks are for running tests so that you can test to make sure the whole notebook is working as expected. Because it tests the methods defined earlier in the notebook, you need to run the previous cells of the notebook before trying to run the tests. You will know the tests pass when the block succeeds without any exceptions.
 
 ---
 
