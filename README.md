@@ -26,12 +26,13 @@ This sample makes use of secret scopes in Databricks to securely store the crede
 
 You can then create the secret scope with one of two options. 
 
-1. Use the Databricks CLI 
-  - Use the workspace terminal or command prompt. You can follow [Create a secret](https://docs.databricks.com/aws/en/security/secrets#create-a-secret) Create two secrets within that secret scope called `cdsclientid` and `cdsclientsecret` containing the client id and secret generated from CONNECT data services.
+1. **Use the Databricks CLI**
+by following [Create a secret](https://docs.databricks.com/aws/en/security/secrets#create-a-secret). Create two secrets within that secret scope called `cdsclientid` and `cdsclientsecret` containing the client id and secret generated from CONNECT data services.
 
-2. Create a secret scope using the Databricks SDK for Python 
-  - If using this option, you can use the sample code included to create the secret scope and secrets.
-  - ___Note: this option requires temporarily entering your client credentials into the notebook as plain text. It's recommended to delete these credentials after the block is run.___
+2. **Create a secret scope using the Databricks SDK for Python**
+using the included sample code to create the secret scope and secrets.
+
+_Note: Option 2 requires temporarily entering your client credentials into the notebook as plain text. It's recommended to delete these credentials after the block is run._
 
 ### Running the notebook
 
