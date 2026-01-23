@@ -44,5 +44,5 @@ The last cell in the notebooks are for running tests so that you can test to mak
 
 ---
 
-For the main Cds samples page [ReadMe](https://github.com/AVEVA/AVEVA-Samples-CloudOperations)  
+For the main CONNECT data services samples page [ReadMe](https://github.com/AVEVA/AVEVA-Samples-CloudOperations)  
 For the main AVEVA samples page [ReadMe](https://github.com/AVEVA/AVEVA-Samples)
