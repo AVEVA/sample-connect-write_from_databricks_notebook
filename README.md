@@ -9,9 +9,9 @@ Developed against Python 3.10.12
 
 This sample is intended to show you how you can write time-series data to CONNECT data services from a Databricks notebook. This may be useful after performing analytics or modelling in Databricks to bring those insights back to the CONNECT platform (and then perhaps back to an on-prem system). There are two sample notebooks in this repository. 
 
-1. **Write Single Stream to CONNECT using API Notebook.ipynb**
+1. [Write Single Stream to CONNECT using API Notebook.ipynb](https://github.com/AVEVA/sample-connect-write_from_databricks_notebook/blob/main/Write%20Single%20Stream%20to%20CONNECT%20using%20API%20Notebook.ipynb)
 uses the CONNECT data services Sequential Data Store (SDS) REST API to write values to a stream. It also makes use of the [Python sample library](https://github.com/AVEVA/sample-adh-sample_libraries-python) to keep the code simple. This method is straightforward and is more suited to sending minimal data to one or a few streams
-3. **Write Multiple Streams to CONNECT using OMF Notebook.ipynb** 
+3. [Write Multiple Streams to CONNECT using OMF Notebook.ipynb](https://github.com/AVEVA/sample-connect-write_from_databricks_notebook/blob/main/Write%20Multiple%20Streams%20to%20CONNECT%20using%20OMF%20Notebook.ipynb) 
 uses CONNECT data services OMF messages to write a large amount of data to one or many streams. This is recommended method of sending a large amount of data to CONNECT data services. For more information on OMF, see [Open Message Format (OMF)](https://docs.aveva.com/category/omf)
 
 ## Getting started
