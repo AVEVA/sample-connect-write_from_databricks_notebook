@@ -1,6 +1,8 @@
 # CONNECT Write From Databricks Notebook
 **Version:** 1.0.0
 
+[![Build Status](https://dev.azure.com/AVEVA-VSTS/Cloud%20Platform/_apis/build/status%2Fproduct-readiness%2FCONNECT%2FAVEVA.sample-connect-write_from_databricks_notebook?repoName=AVEVA%2Fsample-connect-write_from_databricks_notebook&branchName=main)](https://dev.azure.com/AVEVA-VSTS/Cloud%20Platform/_build/latest?definitionId=25047&repoName=AVEVA%2Fsample-connect-write_from_databricks_notebook&branchName=main)
+
 The sample code in this project demonstrates how to write data back to CONNECT data services (Cds) from Databricks. In order to run this sample, you need to have a Databricks environment.
 
 Developed against Python 3.10.12
