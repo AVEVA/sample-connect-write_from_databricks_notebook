@@ -53,7 +53,7 @@ jobs:
             python -m pip freeze
           displayName: 'Install Python dependencies'
 
-        # Coverity cannot capture .ipynb files, so export each notebook to a .py source file first.
+        # Coverity cannot capture .ipynb files, so export each notebook to a valid .py source file first.
         - task: PythonScript@0
           displayName: 'Export notebooks to Python sources for Coverity capture'
           inputs:
@@ -76,9 +76,22 @@ jobs:
               for notebook in notebooks:
                   if '.ipynb_checkpoints' in notebook.parts or out_dir in notebook.parents:
                       continue
+                  notebook_node = nbformat.read(notebook, as_version=4)
+                  notebook_node.cells = [
+                    cell
+                    for cell in notebook_node.cells
+                    if not (
+                      cell.cell_type == 'code'
+                      and any(
+                        line.lstrip().startswith(('%', '!'))
+                        for line in cell.source.splitlines()
+                      )
+                    )
+                  ]
                   source, _ = exporter.from_notebook_node(
-                      nbformat.read(notebook, as_version=4)
+                    notebook_node
                   )
+                  compile(source, str(notebook), 'exec')
                   safe_name = re.sub(r'[^A-Za-z0-9_]+', '_', notebook.stem).strip('_')
                   target = out_dir / f'{safe_name}.py'
                   target.write_text(source, encoding='utf-8')
